@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <%- include ('../../public/menu/menuCliente.html')%>
+
+    <form action="/usuario/salvar_senha/<%=usuario[0].id%>" method="post">
+
+        <label>email</label>      
+        <br>
+        <input type="text" name="email" id="email" value="<%= usuario[0].email %>" readonly > 
+        <br>
+        <label>nova senha</label>
+        <br>
+        <input type="password" name="senha" id="senha" >
+        <br><br>
+        <input type="submit" value="salvar">
+    </form>
+</body>
+
+</html>

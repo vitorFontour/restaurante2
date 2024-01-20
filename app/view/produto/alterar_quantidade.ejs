@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <%- include ('../../public/menu/menuCliente.html')%>
+
+    <form action="/produto/alterar_quantidade/<%=produto[0].id_produto%>" method="post">
+
+        <h2>Alterar quantidade</h2>
+        <label>produto</label>      
+        <br>
+        <input type="text" name="descricao" id="descricao" value="descricao" readonly > 
+        <br>
+        <label>quantidade</label>
+        <br>
+        <input type="number" name="quantidade" id="quantidade"  >
+        <br><br>
+        <input type="submit" value="salvar">
+    </form>
+</body>
+
+</html>
